@@ -1,7 +1,5 @@
 # YOLOV5_Face
 基于pytorch的Yolov5人脸检测
-## 人脸检测demo
-<img src="test_samples/result.jpg" ><br>
 
 ## 性能效果
 | Backbone| easy | medium | hard |
@@ -37,6 +35,8 @@ cd ./widerface_evaluate
 python setup.py build_ext --inplace
 python evaluation.py
 ```
+## 人脸检测示意图
+<img src="test_samples/result.jpg" ><br>
 ## Reference
 - https://github.com/biubug6/Pytorch_Retinaface
 - https://github.com/bubbliiiing/yolov5-pytorch
