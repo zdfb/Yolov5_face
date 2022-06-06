@@ -14,7 +14,7 @@
 >- 提取码：il9n
 
 ## 训练
-### 1. 下载数据集并放置在modeldata下
+### 1. 下载数据集并放置在Data下
 >- 链接: https://drive.google.com/open?id=11UGV3nbVv1x9IC--_tK3Uxf7hA6rlbsS
 
 ### 2. 开始训练
@@ -38,6 +38,6 @@ python setup.py build_ext --inplace
 python evaluation.py
 ```
 ## Reference
-https://github.com/biubug6/Pytorch_Retinaface
-https://github.com/bubbliiiing/yolov5-pytorch
+- https://github.com/biubug6/Pytorch_Retinaface
+- https://github.com/bubbliiiing/yolov5-pytorch
 
