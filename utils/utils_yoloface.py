@@ -62,10 +62,3 @@ class Yolo(object):
                 return None
             else:
                 return results[0]
-
-
-
-
-
-
-    
