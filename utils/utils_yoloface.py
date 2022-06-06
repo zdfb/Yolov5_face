@@ -27,7 +27,7 @@ class Yolo(object):
         self.phi = 's'
         self.neck = 'PAN'
         self.ssh = True
-        self.confidence = 0.4
+        self.confidence = 0.02
         self.nms_iou = 0.4
 
         self.bbox_util = DecodeBox(self.anchors, self.anchors_mask, self.anchors_mask)
