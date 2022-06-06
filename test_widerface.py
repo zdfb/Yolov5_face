@@ -4,10 +4,6 @@ from PIL import Image
 from utils.utils_yoloface import Yolo
 from tqdm import tqdm
 
-# image_path = 'test5.jpg'
-
-# image = Image.open(image_path)
-
 yoloface = Yolo()
 origin_size = True
 
@@ -75,4 +71,3 @@ for img_name in tqdm(test_dataset):
             bboxs_num = str('0') + "\n"
             fd.write(file_name)
             fd.write(bboxs_num)
-    # print('im_detect: {:d}/{:d}'.format(i + 1, num_images))
