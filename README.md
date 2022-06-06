@@ -4,7 +4,7 @@
 ## 性能效果
 | Backbone| easy | medium | hard |
 |:-|:-:|:-:|:-:|
-| CSPdarknet-s | 90.56% | 91.78% | 87.71% |
+| CSPdarknet-s | 94.58% | 93.37% | 82.84% |
 
 ## 预训练模型
 + 基于cspdarknet_s的人脸检测模型yolov5_face。<br>
