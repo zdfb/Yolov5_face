@@ -9,7 +9,19 @@ image = Image.open(image_path)
 
 yoloface = Yolo()
 
-result = yoloface.detect_image(image, [1600, 1600])
+im_shape = np.array(np.shape(image)[0:2])
+
+
+width = im_shape[0]
+height = im_shape[1]
+
+
+width = width // 32 * 32
+height = height // 32 * 32
+
+input_shape = [int(width), int(height)]
+
+result = yoloface.detect_image(image, input_shape)
 
 boxes = result[:, :4]
 landmarks = result[:, 5:]
@@ -31,5 +43,3 @@ for i in range(len(boxes)):
 
     
 cv2.imwrite('result.jpg', image)
-
-
