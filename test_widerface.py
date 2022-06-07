@@ -5,7 +5,7 @@ from utils.utils_yoloface import Yolo
 from tqdm import tqdm
 
 yoloface = Yolo()
-origin_size = True
+origin_size = False
 
 testset_folder = './Data/widerface/val/images/'
 testset_list = testset_folder[:-7] + "wider_val.txt"
@@ -20,16 +20,12 @@ for img_name in tqdm(test_dataset):
 
     image = Image.open(image_path)
 
-    target_size = 1600
-    max_size = 2144
+    target_size = 640
 
     im_shape = np.array(np.shape(image)[0:2])
-    im_size_min = np.min(im_shape[0:2])
     im_size_max = np.max(im_shape[0:2])
 
-    resize = float(target_size) / float(im_size_min)
-    if np.round(resize * im_size_max) > max_size:
-        resize = float(max_size) / float(im_size_max)
+    resize = float(target_size) / float(im_size_max)
     
     if origin_size:
         resize = 1
@@ -71,3 +67,4 @@ for img_name in tqdm(test_dataset):
             bboxs_num = str('0') + "\n"
             fd.write(file_name)
             fd.write(bboxs_num)
+    # print('im_detect: {:d}/{:d}'.format(i + 1, num_images))
